@@ -1,0 +1,59 @@
+package mypac;
+
+import java.util.Scanner;
+
+public class Pyramind 
+{
+	public static void main (String[] args)
+	{
+		// Create Scanner object to take input from the user
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Yelchuru Lakshmi Pavithra");
+		System.out.println("Student Id: AF0332363");
+		
+		// Prompt the user to enter the number of rows
+		System.out.println("Enter the number of rows for the pyramid:");
+		
+		 // Read the user input for the number of rows
+		int numRows = scanner.nextInt();
+		
+		// Initialize a variable to keep track of the current number to be printed
+		int currentNumber = 1;
+		
+		 // Loop through each row
+		for (int i=1; i<=numRows; i++)
+		{
+			// Print leading spaces based on the current row
+			for(int j=1; j<=numRows -i; j++)
+			{
+				System.out.print("\t");
+			}
+			
+			// Print numbers for the current row
+			for(int j=1;j<=i; j++)
+			{
+				//Format for the numbers to print
+				System.out.print(currentNumber + "\t\t");
+				// Increment the current number for the next iteration
+				currentNumber++;
+			}
+			// Move to the next line after printing each row
+			System.out.println(" ");
+		}
+		 // Close the scanner to prevent resource leak
+		scanner.close();
+	}
+}
+
+
+output:
+
+Yelchuru Lakshmi Pavithra
+Student Id: AF0332363
+Enter the number of rows for the pyramid:
+5
+				1		 
+			2		3		 
+		4		5		6		 
+	7		8		9		10		 
+11		12		13		14		15		 
